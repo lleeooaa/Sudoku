@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sudoku.js"></script>
+</head>
+<body>
+    <h1>Sudoku</h1>
+    <div id="controls">
+        <button onclick="generateSudoku('easy')">Easy</button>
+        <button onclick="generateSudoku('medium')">Medium</button>
+        <button onclick="generateSudoku('hard')">Hard</button>
+        <button onclick="generateSudoku('expert')">Expert</button>
+    </div>
+    <div id="game-container">
+        <div id="sudoku-container">
+            <table id="sudoku-grid"></table>
+        </div>
+        <div id="side-panel">
+            <div id="timer-container">
+                <span id="timer">00:00:00</span>
+            </div>
+            <div id="number-buttons">
+                <table>
+                    <tr>
+                        <td><button onclick="fillCell(1)">1</button></td>
+                        <td><button onclick="fillCell(2)">2</button></td>
+                        <td><button onclick="fillCell(3)">3</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="fillCell(4)">4</button></td>
+                        <td><button onclick="fillCell(5)">5</button></td>
+                        <td><button onclick="fillCell(6)">6</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="fillCell(7)">7</button></td>
+                        <td><button onclick="fillCell(8)">8</button></td>
+                        <td><button onclick="fillCell(9)">9</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="action-buttons">
+                <button id="pencil-mark-button" onclick="togglePencilMarkMode()">Pencil Mark : Off</button>
+                <button id="eraser-button" onclick="clearCell()">Eraser</button>
+            </div>
+        </div>
+    </div>
+    <div id="message-container"></div>
+</body>
+</html>

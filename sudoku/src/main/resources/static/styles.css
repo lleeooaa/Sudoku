@@ -1,0 +1,122 @@
+#controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#sudoku-container {
+    margin-right: 20px;
+}
+
+#sudoku-grid {
+    border-collapse: collapse;
+}
+
+#sudoku-grid td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    position: relative; /* To position pencil marks absolutely within the cell */
+}
+
+#sudoku-grid td.empty {
+    background-color: #f0f0f0;
+}
+
+#sudoku-grid td.predefined {
+    background-color: #e0e0e0;
+    color: black;
+    cursor: pointer;
+}
+
+#sudoku-grid td.selected {
+    background-color: #d0d0d0;
+}
+
+#sudoku-grid td.highlight {
+    background-color: #fbffbd;
+}
+
+#number-buttons table {
+    margin-bottom: 10px;
+}
+
+#number-buttons td {
+    padding: 5px;
+}
+
+#number-buttons button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#timer-container {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#eraser-button, #pencil-mark-button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#message-container {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Thicker borders for every 3x3 grid */
+#sudoku-grid td:nth-child(3n) {
+    border-right-width: 2px;
+}
+
+#sudoku-grid td:nth-child(3n+1) {
+    border-left-width: 2px;
+}
+
+#sudoku-grid tr:nth-child(3n) td {
+    border-bottom-width: 2px;
+}
+
+#sudoku-grid tr:nth-child(3n+1) td {
+    border-top-width: 2px;
+}
+
+.pencil-mark {
+    width: 13px;
+    height: 13px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 13px;
+    position: absolute;
+}
+
+.pencil-mark:nth-child(1) { top: 0; left: 0; }
+.pencil-mark:nth-child(2) { top: 0; left: 13px; }
+.pencil-mark:nth-child(3) { top: 0; left: 26px; }
+.pencil-mark:nth-child(4) { top: 13px; left: 0; }
+.pencil-mark:nth-child(5) { top: 13px; left: 13px; }
+.pencil-mark:nth-child(6) { top: 13px; left: 26px; }
+.pencil-mark:nth-child(7) { top: 26px; left: 0; }
+.pencil-mark:nth-child(8) { top: 26px; left: 13px; }
+.pencil-mark:nth-child(9) { top: 26px; left: 26px; }
